@@ -1,2 +1,14 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<h1>Edit <%= @article[:title] %></h1>
+<%= form_for @article do |f| %>
+  <div class="form-group">
+    <%= f.label "title" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "genre" %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <div class="text-right">
+    <%= f.submit 'update', class: "btn btn-danger" %>
+  </div>
+<% end %>

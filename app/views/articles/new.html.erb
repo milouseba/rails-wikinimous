@@ -1,2 +1,14 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>Add a new article</h1>
+<%= form_for @article do |f| %>
+  <div class="form-group">
+    <%= f.label "title" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "genre" %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <div class="text-right">
+    <%= f.submit 'create', class: "btn btn-primary" %>
+  </div>
+<% end %>
